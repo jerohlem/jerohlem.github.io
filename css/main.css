@@ -1,0 +1,163 @@
+/* Palette
+
+
+--white: #fbfffeff;
+--gunmetal: #2b303aff;
+--bottle-green: #097050ff;
+--cinnabar: #d64933ff;
+--portland-orange: #f46036ff;
+
+--white: hsla(165, 100%, 99%, 1);
+--gunmetal: hsla(220, 15%, 20%, 1);
+--bottle-green: hsla(161, 85%, 24%, 1);
+--cinnabar: hsla(8, 67%, 52%, 1);
+--portland-orange: hsla(13, 90%, 58%, 1);
+*/
+
+@font-face {
+	font-family: 'sansation';
+	src: url('font/sansation/Sansation-Regular.ttf');
+}
+
+/* Global Styling */
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	color:#2b303a;
+	background: #fbfffe;
+	font-family: sansation, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	height: 100%;
+}
+
+main {
+	min-height: 100%;
+	height: 100%;
+	position: relative;
+}
+
+a {
+	color: #097050;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+div.wrapper {
+	max-width: 900px;
+	width: 85%;
+	margin: 0 auto;
+	padding: 40px 0 0;
+	/*overflow: hidden;*/
+}
+
+
+/*////////////*/
+/*header stuff*/
+/*////////////*/
+
+header {
+	text-align: center;
+	color: #fbfffe;
+	background: #d64933;
+
+}
+
+header div.wrapper {
+	padding: 40px 0;
+}
+
+/*////////////*/
+/*/menu stuff/*/
+/*////////////*/
+
+ul.menu {
+
+	background: #2b303a;
+	text-align: center;
+
+	margin: 0px;
+
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+ul.menu li {
+	flex: 1 0 auto;
+
+}
+
+ul.menu li.li-mid {
+	border-left: 2px solid #fbfffe;
+	border-right: 2px solid #fbfffe;
+}
+
+ul.menu li a {
+	color: #f46036;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #097050;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/*Contact Page*/
+
+.contact-form {
+	border: 2px outset #d64933;
+	border-radius: 8px;
+	padding: 10px;
+	display: grid;
+	grid-gap: 5px;
+}
+
+
+
+/*Photo Gallery*/
+.thumbnails {
+	display: flex;
+}
+
+img.big-photo {
+	width: 800px;
+}
+
+/*Footer*/
+
+footer {
+	color: #097050;
+
+}
+
+footer .wrapper {
+	width: 50%;
+
+}
+
+.social-links {
+	list-style-type: none;
+	display: flex;
+	text-align: center;
+
+
+	font-size: .75em;
+
+}
+.social-links li {
+		flex: 1 0 auto;
+}
