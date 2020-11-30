@@ -7,6 +7,7 @@
 	<title>Jeremy Scott Ohlemacher</title>
 
   <link rel="stylesheet" href="css/main.css" />
+	<script src="js/script.js" async></script>
 
 
 </head>
@@ -31,11 +32,11 @@
 
 <div class="wrapper">
 	<p>Send me a note</p>
-	<form class="contact-form" onsubmit="return false">
-	  <input type="text" placeholder="Name" class="name-box" id="nameBox"/>
-	  <input type="email" placeholder="email@domain.com" class="email-box" id="emailBox"/>
-	  <textarea rows="5" class="messsage-box" id="messageBox"></textarea>
-	  <button class="send-button" id="sendMessage">Send Message</button>
+	<form class="contact-form" onsubmit="sendMessage()">
+	  <input type="text" placeholder="Name" maxlength="500" class="name-box" id="nameBox"/>
+	  <!--<input type="email" placeholder="email@domain.com" class="email-box" id="emailBox"/>-->
+	  <textarea rows="5" maxlength="1000" class="messsage-box" id="messageBox"></textarea>
+	  <input type="submit" class="send-button" id="sendButton" value="Send Message"/>
 
 	</form>
 </div>
