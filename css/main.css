@@ -148,6 +148,8 @@ ul.menu li a {
 img.big-photo {
 	/*width: 100%;*/
 	max-width: 2000px;
+	height: 80vh;
+	min-height: 800px;
 	filter: drop-shadow(3px 3px 3px hsla(220, 15%, 20%, .5));
 }
 

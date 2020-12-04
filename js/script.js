@@ -28,8 +28,9 @@ function sendMessage() {
   newLink.click();
 }
 
+//build a srcset for each image on the page
 function buildImgSrcSet(){
-  for (let i=0; i<IMAGES.length; i++) {
+  for (let i=0; i<IMAGES.length-1; i++) {
     let imgSrc = IMAGES[i].getAttribute("src");
     imgSrc = imgSrc.split("_")[0];
     let srcSet = makeSrcSet(imgSrc);
@@ -40,6 +41,8 @@ function buildImgSrcSet(){
   }
 }
 
+//takes an image name and makes a sourceset for filenames
+//in the form of "name_size.jpg sizew"
 function makeSrcSet(imgSrc) {
   let markup = [];
   let width = 400;
@@ -51,6 +54,7 @@ function makeSrcSet(imgSrc) {
   return markup.join();
 }
 
+//sets the large image to the passed in image
 function showPic(img) {
   BIGPIC.setAttribute("srcset", img.getAttribute("srcset"));
 
@@ -59,8 +63,12 @@ function showPic(img) {
 //checks if there are images on the page before trying to build srcset
 if(IMAGES[0]){
   buildImgSrcSet();
-  BIGPIC.setAttribute("srcset", IMAGES[0].getAttribute("srcset"));
 
+  //set the large image to view the first image in the thumbnails
+  BIGPIC.setAttribute("srcset", IMAGES[0].getAttribute("srcset"));
+  BIGPIC.setAttribute("sizes", SIZES[BIGPIC.getAttribute("data-type")]);
+
+  //listen for clicks on any thumbnail and call showPic when clicked
   for (let i=0; i<IMAGES.length-1; i++) {
     IMAGES[i].addEventListener("click", function(){showPic(this);}, false);
   }
