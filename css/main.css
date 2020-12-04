@@ -83,14 +83,10 @@ header div.wrapper {
 /*////////////*/
 
 ul.menu {
-
 	background: #2b303a;
-
+	color: #fbfffe;
 
 	margin: 0px;
-
-	list-style-type: none;
-
 }
 
 
@@ -137,20 +133,6 @@ ul.menu li a {
 	padding:0;
 	text-align: center;
 }
-/*now in responsive
-.thumbnails {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	list-style-type: none;
-	width: 100%;
-}*/
-
-/*now in responsive
-ul.thumbnails li {
-	flex: 1 0 auto;
-	margin: .5em;
-}*/
 
 .thumb {
 	/*width: 150px;*/
@@ -201,6 +183,7 @@ footer .wrapper {
 /*for big screens*/
 @media screen and (min-width:800px){
 	ul.menu {
+		list-style-type: none;
 		text-align: center;
 		display: flex;
 		flex-wrap: wrap;
@@ -247,9 +230,18 @@ footer .wrapper {
 /*for small screens*/
 @media screen and (max-width:799px){
 
+	ul.menu {
+		list-style-type: square;
+	}
+
 	ul.menu li {
 		padding: .3em 0 .3em 0;
 
+	}
+
+	ul.menu li.li-mid {
+		border-top: 1px solid #fbfffe;
+		border-bottom: 1px solid #fbfffe;
 	}
 
 	img.big-photo {
