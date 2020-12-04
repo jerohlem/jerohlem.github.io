@@ -135,6 +135,7 @@ ul.menu li a {
 .thumbnails {
 	list-style-type: none;
 	padding:0;
+	text-align: center;
 }
 /*now in responsive
 .thumbnails {
