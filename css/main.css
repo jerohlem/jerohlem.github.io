@@ -235,6 +235,10 @@ footer .wrapper {
 		margin: 8px;
 	}
 
+	.thumb {
+		cursor:pointer;
+	}
+
 	.thumb:hover {
 		opacity: 90%;
 	}
