@@ -121,12 +121,20 @@ ul.menu li a {
 
 /*Photo Gallery*/
 .photo-gallery {
-	text-align: center;
+	margin: 0 auto;
+	/* max-width:900px; */
+}
 
+.thumbnail-wrapper {
+	margin: 0 auto;
+
+	padding: 40px 0 0;
+	max-width: 830px;
 }
 
 .thumbnails {
 	list-style-type: none;
+	padding:0;
 }
 /*now in responsive
 .thumbnails {
@@ -151,11 +159,13 @@ ul.thumbnails li {
 
 .big-photo-wrap {
 	text-align: center;
+
 }
 
 img.big-photo {
 	/*width: 100%;*/
 	max-width: 2000px;
+	filter: drop-shadow(3px 3px 3px hsla(220, 15%, 20%, .5));
 }
 
 /*Footer*/
@@ -221,7 +231,7 @@ footer .wrapper {
 
 	ul.thumbnails li {
 		flex: 1 0 auto;
-		margin: .5em;
+		margin: 8px;
 	}
 
 	.thumb:hover {
