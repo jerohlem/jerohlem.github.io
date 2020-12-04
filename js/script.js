@@ -52,17 +52,15 @@ function makeSrcSet(imgSrc) {
 }
 
 function showPic(img) {
-  BIGPIC.setAttribute("srcset", img.getAttribute("srcSet"));
-  console.log("click");
+  BIGPIC.setAttribute("srcset", img.getAttribute("srcset"));
+
 }
 
 //checks if there are images on the page before trying to build srcset
 if(IMAGES[0]){
   buildImgSrcSet();
   BIGPIC.setAttribute("srcset", IMAGES[0].getAttribute("srcset"));
-  console.log(BIGPIC);
-  console.log(IMAGES[0]);
-  //IMAGES[0].onclick = showPic(IMAGES[0]);
+
   for (let i=0; i<IMAGES.length-1; i++) {
     IMAGES[i].addEventListener("click", function(){showPic(this);}, false);
   }
